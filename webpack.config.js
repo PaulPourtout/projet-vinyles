@@ -7,7 +7,7 @@ const APP_DIR = path.resolve(__dirname, 'src/client/app');
 const config = {
   entry: APP_DIR + '/index.jsx',
   output: {
-    // path: 'http://localhost:8080',
+    path: BUILD_DIR,
     filename: 'bundle.js'
   },
   module: {

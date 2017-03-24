@@ -7,9 +7,9 @@ class NewRecords extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: []
+      newRecords: []
     };
-    console.log('hello le state');
+    console.log('hello le state' + this.state.newRecords);
   }
 
   componentDidMount() {
@@ -40,15 +40,15 @@ class NewRecords extends React.Component {
     }; // End buildURLArray() function
 
 	// Set callback function
-    function _cb_lastRecords(root, target) {
+    const _cb_lastRecords = (root) => {
       var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
-      var html = [];
+	  var html = [];
       for (var i = 0; i < items.length; ++i) {
         var item = items[i];
-        var title = item.title;
+        var title = item.title[0];
         // Shorten title for preview
         var shortTitle = title[0].substr(0, 50);
-        var pic = item.galleryURL;
+        var pic = item.galleryURL[0];
         var price = item.sellingStatus[0].currentPrice[0].__value__;
         var devise = item.sellingStatus[0].currentPrice[0]["@currencyId"];
         var viewitem = item.viewItemURL;
@@ -61,13 +61,24 @@ class NewRecords extends React.Component {
 		// 			<a target='_blank' href="${viewitem}">Acheter</a>
 		// 		</div>
 	 //  		</div>`);
-	 html.push(`<Record picture='${pic}' shortTitle='${shortTitle}' price='${price}' devise='${devise}' viewitem='${viewitem}'></Record>`);
+	//  html.push(`<Record picture='${pic}' shortTitle='${shortTitle}' price='${price}' devise='${devise}' viewitem='${viewitem}'></Record>`);
+			var newRecord = {
+				pic: pic,
+				title: title,
+				shortTitle: shortTitle,
+				price: price,
+				devise: devise,
+				viewitem: viewitem
+			}
+	 		html.push(newRecord);
         }
       }
-      target.innerHTML = html.join("");
-      // Create a JavaScript array of the item filters you want to use in your request
-    } // End _cb_findItemsByKeywords() function
+	  console.log(html);
+	//   return html;
+	this.setState({newRecords: html});
+}; // End _cb_findItemsByKeywords() function
 
+	// Create a JavaScript array of the item filters you want to use in your request
     var filterNewRecords = [
       {
         "name": "Seller",
@@ -92,24 +103,40 @@ class NewRecords extends React.Component {
     url += "&paginationInput.entriesPerPage=18";
     url += urlfilter;
 
-const recordsContainer = document.querySelector(".recordsContainer");
+	const recordsContainer = document.querySelector(".recordsContainer");
+
+// Generate all Records from state newRecords
+	const generateRecords = (array, target) => {
+		array.map(item => {
+			const newItem = `<Record picture='${item.pic}' shortTitle='${item.shortTitle}' price='${item.price}' devise='${item.devise}' viewitem='${item.viewitem}'></Record>`;
+			console.log("target ", target);
+			console.log(`newItem ${newItem}`);
+			target.appendChild(newItem);
+		});
+	};
+
+
     // Call eBay API by fetch
     return fetchJsonp(url)
 	.then(result => {
 		return result.json();
 	})
 	.then(parsedResult => {
-		_cb_lastRecords(parsedResult, recordsContainer);
-    }).catch(err => {
+		_cb_lastRecords(parsedResult);
+		console.log(this.state.newRecords);
+		// generateRecords(this.state.newRecords, recordsContainer)
+    })
+	.catch(err => {
       console.log(err);
     });
+	recordsContainer.appendChild('<p>coucou</p>');
 } // End DidMount
 
   render() {
     return (
       <div className="NewRecords">
 		<h3>Nos dernieres trouvailles :</h3>
-		<Record picture='url' shortTitle='coucou' price='${price}' devise='${devise}' viewitem='${viewitem}'></Record>
+		{/* <Record picture='url' shortTitle='coucou' price='${price}' devise='${devise}' viewitem='${viewitem}'></Record> */}
 		<div className="recordsContainer">
 
 		</div>
