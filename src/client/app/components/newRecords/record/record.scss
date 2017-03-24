@@ -1,0 +1,50 @@
+$btn-bg: rgb(30, 214, 109);
+$btn-color: rgb(255, 255, 255);
+$transparent-black: rgba(0, 0, 0, 0.5);
+
+@mixin btn {
+	padding: 15px 30px;
+	border-radius: 5px;
+	background-color: $btn-bg;
+	color: $btn-color;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.Record {
+	background: red;
+	width: 200px;
+	height: 200px;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+
+	.Record-content {
+		box-sizing: border-box;
+		color: $btn-color;
+		background-color: $transparent-black;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		align-items: center;
+		text-align: center;
+		top: 100%;
+		right: 100%;
+		transform: rotateZ(-180deg);
+		transition: 0.2s ease-in-out;
+		.btn {
+			@include btn;
+		}
+	}
+	&:hover {
+		.Record-content {
+			top: 0;
+			right: 0;
+			transform: rotateZ(0deg);
+		}
+	}
+}

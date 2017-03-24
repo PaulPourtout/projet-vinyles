@@ -1,11 +1,15 @@
 import React from 'react';
 import { render } from 'react-dom';
 import 'normalize.css';
-
+import Home from './scenes/home/Home.jsx';
 
 class App extends React.Component {
 	render() {
-		return <p> Hello les vinyles de la mort qui tue avec sass</p>;
+		return (
+			<div className="App">
+				<Home/>
+			</div>
+		)
 	}
 }
 
