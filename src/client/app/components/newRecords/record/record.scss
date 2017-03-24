@@ -9,42 +9,71 @@ $transparent-black: rgba(0, 0, 0, 0.5);
 	color: $btn-color;
 	text-transform: uppercase;
 	font-weight: bold;
+	text-decoration: none;
+	&:hover {
+		background-color: darken($btn-bg, 10%);
+	}
 }
 
 .Record {
-	background: red;
-	width: 200px;
-	height: 200px;
+	background-size: cover;
+	background-position: center;
+	width: 210px;
+	height: 210px;
 	box-sizing: border-box;
 	position: relative;
 	overflow: hidden;
 
+
 	.Record-content {
 		box-sizing: border-box;
 		color: $btn-color;
-		background-color: $transparent-black;
+
+		opacity: 0;
 		padding: 10px;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: space-around;
 		height: 100%;
 		width: 100%;
+		transform: scale(0.5);
 		position: absolute;
 		align-items: center;
 		text-align: center;
-		top: 100%;
-		right: 100%;
-		transform: rotateZ(-180deg);
-		transition: 0.2s ease-in-out;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		transition: 0.3s ease-in-out;
+		transition-delay: 0.2s;
+		p {
+			margin: 0;
+			line-height: 1.5;
+		}
 		.btn {
 			@include btn;
+			position: relative;
+			left: 150%;
+			transition: left 0.3s ease 0.4s, background-color 0.3s ease;
 		}
+	}
+	.Record-content-bg {
+		background-color: $transparent-black;
+		height: 100%;
+		width: 100%;
+		bottom: 100%;
+		position: absolute;
+		transition: 0.3s ease-in-out;
 	}
 	&:hover {
 		.Record-content {
-			top: 0;
-			right: 0;
-			transform: rotateZ(0deg);
+			opacity: 1;
+			transform: scale(1);
+		}
+		.btn {
+			left: 0;
+		}
+		.Record-content-bg {
+			bottom: 0;
 		}
 	}
 }
