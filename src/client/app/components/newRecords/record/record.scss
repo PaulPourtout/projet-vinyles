@@ -18,7 +18,7 @@ $transparent-black: rgba(0, 0, 0, 0.5);
 .Record {
 	background-size: cover;
 	background-position: center;
-	width: 210px;
+	width: 16.6%;
 	height: 210px;
 	box-sizing: border-box;
 	position: relative;
@@ -52,8 +52,8 @@ $transparent-black: rgba(0, 0, 0, 0.5);
 		.btn {
 			@include btn;
 			position: relative;
-			left: 150%;
-			transition: left 0.3s ease 0.4s, background-color 0.3s ease;
+			top: 150%;
+			transition: top 0.2s ease 0.4s, background-color 0.3s ease;
 		}
 	}
 	.Record-content-bg {
@@ -70,7 +70,7 @@ $transparent-black: rgba(0, 0, 0, 0.5);
 			transform: scale(1);
 		}
 		.btn {
-			left: 0;
+			top: 0;
 		}
 		.Record-content-bg {
 			bottom: 0;

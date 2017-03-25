@@ -7,6 +7,7 @@ body {
 
 .header-container {
   background: red;
+  overflow: auto;
 
   .col-1 {
     font-family: $font;

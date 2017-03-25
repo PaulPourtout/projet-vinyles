@@ -22,7 +22,14 @@ const config = {
       }, {
         test: /\.s?css$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
-      }
+     },
+     {
+        test: /\.(jpg|png|svg)$/,
+        loader: 'url-loader',
+        options: {
+           name: 'image/[hash].[ext]'
+        }
+     }
     ]
   }
 };

@@ -102,7 +102,13 @@ class NewRecords extends React.Component {
       console.log(err);
     });
 
-} // End DidMount
+} // End of componentWillMount
+
+   componentDidUpdate() {
+      const loadingLogo = document.querySelector(".loading-logo");
+      loadingLogo.style.display = "none";
+      console.log('loaded');
+   }
 
   render() {
     // Create array containing all the records
@@ -114,7 +120,10 @@ class NewRecords extends React.Component {
     return (
       <div className="NewRecords">
         <h3>Nos dernieres trouvailles :</h3>
+
         <div className="recordsContainer">
+           <div className="loading-logo">
+          </div>
           {newRecord}
         </div>
       </div>
