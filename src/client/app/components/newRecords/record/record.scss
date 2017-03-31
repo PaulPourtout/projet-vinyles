@@ -1,0 +1,79 @@
+$btn-bg: rgb(30, 214, 109);
+$btn-color: rgb(255, 255, 255);
+$transparent-black: rgba(0, 0, 0, 0.5);
+
+@mixin btn {
+	padding: 15px 30px;
+	border-radius: 5px;
+	background-color: $btn-bg;
+	color: $btn-color;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	&:hover {
+		background-color: darken($btn-bg, 10%);
+	}
+}
+
+.Record {
+	background-size: cover;
+	background-position: center;
+	width: 16.6%;
+	height: 210px;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+
+
+	.Record-content {
+		box-sizing: border-box;
+		color: $btn-color;
+
+		opacity: 0;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 100%;
+		width: 100%;
+		transform: scale(0.5);
+		position: absolute;
+		align-items: center;
+		text-align: center;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		transition: 0.3s ease-in-out;
+		transition-delay: 0.2s;
+		p {
+			margin: 0;
+			line-height: 1.5;
+		}
+		.btn {
+			@include btn;
+			position: relative;
+			top: 150%;
+			transition: top 0.2s ease 0.4s, background-color 0.3s ease;
+		}
+	}
+	.Record-content-bg {
+		background-color: $transparent-black;
+		height: 100%;
+		width: 100%;
+		bottom: 100%;
+		position: absolute;
+		transition: 0.3s ease-in-out;
+	}
+	&:hover {
+		.Record-content {
+			opacity: 1;
+			transform: scale(1);
+		}
+		.btn {
+			top: 0;
+		}
+		.Record-content-bg {
+			bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.recordsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.loading-logo {
+	width: 110px;
+	height: 110px;
+	background-image: url('./../../../img/vinyl-logo.png');
+	background-size: cover;
+	animation: looping 1s infinite linear;
+}
+@keyframes looping {
+	from {
+		-webkit-transform: rotateZ(0deg);
+		transform: rotateZ(0deg);
+	}
+
+	to {
+		-webkit-transform: rotateZ(360deg);
+		transform: rotateZ(360deg);
+	}
+}

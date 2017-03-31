@@ -22,6 +22,7 @@ const config = {
       }, {
         test: /\.s?css$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
+<<<<<<< HEAD
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -30,6 +31,16 @@ const config = {
         'image-webpack-loader'
     ]
       }
+=======
+     },
+     {
+        test: /\.(jpg|png|svg)$/,
+        loader: 'url-loader',
+        options: {
+           name: 'image/[hash].[ext]'
+        }
+     }
+>>>>>>> 2bd4116420fea170448b6a9164cf906e2bf4f2c8
     ]
   }
 };

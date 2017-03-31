@@ -5,9 +5,12 @@ import Home from './scenes/home/Home.jsx';
 
 class App extends React.Component {
 	render() {
-		return(
-			<Home />
-		);
+		return (
+			<div className="App">
+				<Home/>
+			</div>
+
+		)
 	}
 }
 

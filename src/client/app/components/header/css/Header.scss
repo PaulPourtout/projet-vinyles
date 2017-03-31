@@ -1,0 +1,23 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+body {
+  @include group;
+}
+
+.header-container {
+  background: red;
+  overflow: auto;
+
+  .col-1 {
+    font-family: $font;
+    width: 50%;
+    float: left;
+  }
+
+  .col-2 {
+    width: 50%;
+    float: left;
+  }
+
+}
