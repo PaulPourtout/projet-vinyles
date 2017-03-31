@@ -10,7 +10,7 @@ class Header extends React.Component {
 			<div className="header-container">
 					<header>
 						<h1 className="logo">
-							Chez Philippe
+							Chez Philippevfergerg
 						</h1>
 					</header>
 					<div className="col-1">

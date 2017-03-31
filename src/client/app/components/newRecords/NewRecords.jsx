@@ -115,7 +115,7 @@ class NewRecords extends React.Component {
     const newRecord = [];
     // Looping through the items
     this.state.newRecords.map(item => {
-      newRecord.push(<Record pic={item.pic} shortTitle={item.shortTitle} price={item.price} devise={item.devise} viewitem={item.viewitem}/>);
+      newRecord.push(<Record key={item.viewitem} pic={item.pic} shortTitle={item.shortTitle} price={item.price} devise={item.devise} viewitem={item.viewitem}/>);
     });
     return (
       <div className="NewRecords">
