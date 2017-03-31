@@ -22,6 +22,13 @@ const config = {
       }, {
         test: /\.s?css$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+        'file-loader',
+        'image-webpack-loader'
+    ]
       }
     ]
   }
