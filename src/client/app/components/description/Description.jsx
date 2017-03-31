@@ -20,7 +20,7 @@ class Description extends React.Component {
 				</div>
 
 				<div className="description-images">
-					<div className="description-images-image"><img src={Img} alt="#" /></div>
+					<div className="description-images-image"><img src={''} alt="#" /></div>
 					<div className="description-images-image"><img src="#" alt="#" /></div>
 					<div className="description-images-image"><img src="#" alt="#" /></div>
 				</div>
