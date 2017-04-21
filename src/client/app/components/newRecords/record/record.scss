@@ -16,14 +16,14 @@ $transparent-black: rgba(0, 0, 0, 0.5);
 }
 
 .Record {
-	background-size: cover;
+	background-size: 100%;
 	background-position: center;
 	width: 16.6%;
 	height: 210px;
 	box-sizing: border-box;
 	position: relative;
 	overflow: hidden;
-
+	transition: 0.6s ease-out;
 
 	.Record-content {
 		box-sizing: border-box;
@@ -65,6 +65,7 @@ $transparent-black: rgba(0, 0, 0, 0.5);
 		transition: 0.3s ease-in-out;
 	}
 	&:hover {
+		background-size: 110%;
 		.Record-content {
 			opacity: 1;
 			transform: scale(1);

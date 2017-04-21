@@ -11,7 +11,7 @@ class Home extends React.Component {
       <div className="Home">
         <Header/>
         <NewRecords/>
-				<Description />
+		<Description />
       </div>
     )
   }
