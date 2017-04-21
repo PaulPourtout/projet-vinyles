@@ -1,60 +1,16 @@
 webpackHotUpdate(0,{
 
-/***/ 150:
-false,
-
-/***/ 241:
-false,
-
-/***/ 242:
-false,
-
-/***/ 243:
-false,
-
-/***/ 244:
-false,
-
 /***/ 245:
 /* unknown exports provided */
 /* all exports used */
-/*!*********************************************!*\
-  !*** ./src/client/app/scenes/home/Home.jsx ***!
-  \*********************************************/
-/***/ (function(module, exports) {
+/*!*****************************************************!*\
+  !*** ./src/client/app/components/header/Header.jsx ***!
+  \*****************************************************/
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed: SyntaxError: Unexpected token (15:1)\\n\\n\\u001b[0m \\u001b[90m 13 | \\u001b[39m        \\u001b[33m<\\u001b[39m\\u001b[33mHeader\\u001b[39m\\u001b[33m/\\u001b[39m\\u001b[33m>\\u001b[39m\\n \\u001b[90m 14 | \\u001b[39m        \\u001b[33m<\\u001b[39m\\u001b[33mNewRecords\\u001b[39m\\u001b[33m/\\u001b[39m\\u001b[33m>\\u001b[39m\\n\\u001b[31m\\u001b[1m>\\u001b[22m\\u001b[39m\\u001b[90m 15 | \\u001b[39m\\u001b[33m<<\\u001b[39m\\u001b[33m<<\\u001b[39m\\u001b[33m<<\\u001b[39m\\u001b[33m<\\u001b[39m \\u001b[33mHEAD\\u001b[39m\\n \\u001b[90m    | \\u001b[39m \\u001b[31m\\u001b[1m^\\u001b[22m\\u001b[39m\\n \\u001b[90m 16 | \\u001b[39m\\t\\t\\u001b[33m<\\u001b[39m\\u001b[33mDescription\\u001b[39m \\u001b[33m/\\u001b[39m\\u001b[33m>\\u001b[39m\\n \\u001b[90m 17 | \\u001b[39m\\u001b[33m===\\u001b[39m\\u001b[33m===\\u001b[39m\\u001b[33m=\\u001b[39m\\n \\u001b[90m 18 | \\u001b[39m\\t\\t\\t\\t\\u001b[33m<\\u001b[39m\\u001b[33mDescription\\u001b[39m \\u001b[33m/\\u001b[39m\\u001b[33m>\\u001b[39m\\u001b[0m\\n\");//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjQ1LmpzIiwic291cmNlcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlUm9vdCI6IiJ9");
+"use strict";
+eval("/* WEBPACK VAR INJECTION */(function(process) {\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(/*! react */ 15);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ 22);\n\n__webpack_require__(/*! ./css/Header.scss */ 296);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Header = function (_React$Component) {\n\t_inherits(Header, _React$Component);\n\n\tfunction Header() {\n\t\t_classCallCheck(this, Header);\n\n\t\treturn _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));\n\t}\n\n\t_createClass(Header, [{\n\t\tkey: 'render',\n\t\tvalue: function render() {\n\t\t\treturn _react2.default.createElement(\n\t\t\t\t'div',\n\t\t\t\t{ className: 'header-container' },\n\t\t\t\t_react2.default.createElement(\n\t\t\t\t\t'header',\n\t\t\t\t\tnull,\n\t\t\t\t\t_react2.default.createElement(\n\t\t\t\t\t\t'h1',\n\t\t\t\t\t\t{ className: 'logo' },\n\t\t\t\t\t\t'Chez Philippe'\n\t\t\t\t\t)\n\t\t\t\t),\n\t\t\t\t_react2.default.createElement(\n\t\t\t\t\t'form',\n\t\t\t\t\t{ action: '' },\n\t\t\t\t\t_react2.default.createElement('input', { type: 'text', placeholder: 'ex: Jimi Hendrix' }),\n\t\t\t\t\t_react2.default.createElement('input', { type: 'submit' })\n\t\t\t\t)\n\t\t\t);\n\t\t}\n\t}]);\n\n\treturn Header;\n}(_react2.default.Component);\n\nvar _default = Header;\nexports.default = _default;\n;\n\nvar _temp = function () {\n\tif (typeof __REACT_HOT_LOADER__ === 'undefined') {\n\t\treturn;\n\t}\n\n\t__REACT_HOT_LOADER__.register(Header, 'Header', '/home/simplonco/Documents/sites/projets/projet-vinyle/src/client/app/components/header/Header.jsx');\n\n\t__REACT_HOT_LOADER__.register(_default, 'default', '/home/simplonco/Documents/sites/projets/projet-vinyle/src/client/app/components/header/Header.jsx');\n}();\n\n;\n\n ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', \"/home/simplonco/Documents/sites/projets/projet-vinyle/src/client/app/components/header/Header.jsx\"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, \"/home/simplonco/Documents/sites/projets/projet-vinyle/src/client/app/components/header/Header.jsx\"); } } })();\n/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../../../~/process/browser.js */ 0)))//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjQ1LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NsaWVudC9hcHAvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLmpzeD8zODY5Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyByZW5kZXIgfSBmcm9tICdyZWFjdC1kb20nO1xuaW1wb3J0ICcuL2Nzcy9IZWFkZXIuc2Nzcyc7XG5cblxuXG5jbGFzcyBIZWFkZXIgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuXHRyZW5kZXIoKSB7XG5cdFx0cmV0dXJuIChcblx0XHRcdDxkaXYgY2xhc3NOYW1lPVwiaGVhZGVyLWNvbnRhaW5lclwiPlxuXHRcdFx0XHRcdDxoZWFkZXI+XG5cdFx0XHRcdFx0XHQ8aDEgY2xhc3NOYW1lPVwibG9nb1wiPlxuXHRcdFx0XHRcdFx0XHRDaGV6IFBoaWxpcHBlXG5cdFx0XHRcdFx0XHQ8L2gxPlxuXHRcdFx0XHRcdDwvaGVhZGVyPlxuXHRcdFx0XHQ8Zm9ybSBhY3Rpb249XCJcIj5cblx0XHRcdFx0XHQ8aW5wdXQgdHlwZT1cInRleHRcIiBwbGFjZWhvbGRlcj1cImV4OiBKaW1pIEhlbmRyaXhcIi8+XG5cdFx0XHRcdFx0PGlucHV0IHR5cGU9XCJzdWJtaXRcIi8+XG5cdFx0XHRcdDwvZm9ybT5cblx0XHRcdDwvZGl2PlxuXHRcdClcblx0fVxufVxuXG5leHBvcnQgZGVmYXVsdCBIZWFkZXI7XG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gLi9zcmMvY2xpZW50L2FwcC9jb21wb25lbnRzL2hlYWRlci9IZWFkZXIuanN4Il0sIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFBO0FBQ0E7OztBQUFBO0FBQ0E7QUFBQTtBQUNBOzs7Ozs7Ozs7QUFHQTs7Ozs7Ozs7Ozs7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFEQTtBQUtBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFGQTtBQU5BO0FBWUE7Ozs7QUFmQTtBQUNBO0FBaUJBOzs7Ozs7Ozs7QUFsQkE7QUFDQTs7Ozs7OzsiLCJzb3VyY2VSb290IjoiIn0=");
 
-/***/ }),
-
-/***/ 288:
-false,
-
-/***/ 289:
-false,
-
-/***/ 290:
-false,
-
-/***/ 291:
-false,
-
-/***/ 292:
-false,
-
-/***/ 293:
-false,
-
-/***/ 55:
-false,
-
-/***/ 56:
-false,
-
-/***/ 57:
-false,
-
-/***/ 58:
-false
+/***/ })
 
 })

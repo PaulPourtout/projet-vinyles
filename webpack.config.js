@@ -26,7 +26,7 @@ const config = {
       {
         test: /\.(js|jsx)?$/,
         include: APP_DIR,
-        loaders: ["react-hot-loader", "babel-loader"]
+        loaders: ["react-hot-loader/webpack", "babel-loader"]
       },
 	   {
         test: /\.s?css$/,
