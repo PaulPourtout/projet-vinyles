@@ -6,8 +6,15 @@ body {
 }
 
 .header-container {
-  background: red;
+  background: linear-gradient(to top, rgb(218, 77, 8), rgb(244, 160, 18));
   overflow: auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 80vh;
 
   .col-1 {
     font-family: $font;

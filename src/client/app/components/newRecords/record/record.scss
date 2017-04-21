@@ -15,11 +15,16 @@ $transparent-black: rgba(0, 0, 0, 0.5);
 	}
 }
 
+$boxSide: 16vw;
+
 .Record {
 	background-size: cover;
 	background-position: center;
-	width: 16.6%;
-	height: 210px;
+	display: block;
+	height: 0;
+	padding-bottom: $boxSide;
+	width: $boxSide;
+
 	box-sizing: border-box;
 	position: relative;
 	overflow: hidden;

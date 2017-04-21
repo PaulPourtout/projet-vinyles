@@ -7,6 +7,7 @@ const APP_DIR = path.resolve(__dirname, 'src/client/app');
 
 const config = {
   entry: [
+	'react-hot-loader/patch',
 	'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
 	APP_DIR + '/index.jsx'],
